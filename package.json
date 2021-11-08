@@ -1,0 +1,21 @@
+{
+  "name": "visor-agua",
+  "version": "1.0.0",
+  "description": "Aplicación con información de extracción de aguas y APR en la región de Valparaíso",
+  "main": "hmtl/proyecto.html",
+  "scripts": {
+    "start": "http-server html/proyecto.html",
+    "extr-agua": "node html/JS/extra-agua.js"
+  },
+  "keywords": [],
+  "author": "Gonzalo Rojas",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "cheerio": "^1.0.0-rc.10",
+    "xlsx": "^0.17.3"
+  },
+  "devDependencies": {
+    "http-server": "^13.0.2"
+  }
+}
