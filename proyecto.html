@@ -19,40 +19,140 @@
     <!-- Librería CSS Mapbox -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
 
+
 </head>
 
 <body>
     <span>
-        <h1>Visor de aguas</h1>
+        <h3 align= 'center'><br>Información de aguas, Región de Valparaíso <br></h3>
     </span>
 
-
+    <!--   Primera columna: graficos-->
     <div class="container">
         <div class="row align-items-start">
             <div class="col">
-                <div class="alert alert-primary" role="alert">
+                <div class="alert alert-info" role="alert", align='center'>
                     Gráficos de extracción de aguas
                 </div>
-                <div class="col">
-                    <div id="grafico_sup" style="width: 400px; height: 400px;" id="grafico_sub"
-                        style="width: 400px; height: 400px;" id="grafico_adq" style="width: 400px; height: 400px;">
+                <div class="col" >
+
+                    <div>
+                        <canvas id="chart_sup" width="500" height="500"></canvas>
                     </div>
+                    <div class='selectBox' style='text-align: center;'>
+                        <select id='graficos'>
+
+                            <option value="767, 778, 754, 829, 819, 681, 705, 637.9334999999999, 465.79790627982675">
+                                Aguas superficiales</option>;
+                            <option value="327, 332, 322, 623, 604, 606, 619, 612.4125000000001, 678.6269418544653">
+                                Aguas subterraneas</option>;
+                            <option value='0, 0, 0, 0, 15, 14, 12, 12.8, 9.217704718417048'>
+                                Aguas adquiridas a terceros</option>;
+                        </select>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                    <div id="chart_sup">
+                    </div>
+
+                    <script>
+
+                        const graf1 = document.getElementById('chart_sup').getContext('2d');
+                        const myChart1 = new Chart(graf1, {
+                            type: 'bar',
+                            data: {
+                                labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+                                datasets: [{
+                                    label: 'Extracción de aguas en Lts/seg, región de Valparaíso (2010-2018)',
+                                    data: [767, 778, 754, 829, 819, 681, 705, 637.9334999999999, 465.79790627982675],
+                                    backgroundColor: 'pink',
+                                    borderColor: 'brown',
+                                    borderWidth: 1,
+
+
+                                }]
+                            },
+                            options: {
+
+                                scales: {
+                                    x: {
+                                        display: true,
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Año',
+                                            font: {
+                                                size: 14
+                                            },
+
+                                        }
+                                    },
+                                    y: {
+                                        display: true,
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Lts/seg',
+                                            font: {
+                                                size: 14
+                                            },
+
+                                        }
+                                    }
+                                },
+                                responsive: false
+
+                            }
+                        });
+
+                        const graficos = document.getElementById('graficos');
+                        graficos.addEventListener('change', salesTracker);
+                        function salesTracker() {
+                            console.log(graficos.value.split(','));
+                            graficos.value.split(',');
+                            myChart1.data.datasets[0].data = graficos.value.split(',');
+                            myChart1.update();
+                        };
+
+                    </script>
+
                 </div>
             </div>
-
+            <!-- Segunda columna-->
             <div class="col">
-                <div class="alert alert-danger" role="alert">
-                    Agua Potable Rural, región de Valparaíso
+                <div class="alert alert-danger" role="alert" align='center'>
+                    Información relacionada al agua en la región de Valparaíso
                 </div>
                 <div class="container-fluid">
                     <!--
-                        Desplegar Mapa y cuadros informativos en mapa.
+                        Información sobre la aplicación
                     -->
-                    <div class="container">
-
+                    <div class="container" >
 
                         <div class="col">
-                            <div id='MapaAgua' style='width: 650px; height: 550px;'></div>
+                            <div ><span>La región de Valparaíso tiene seis territorios declarados como zona
+                                    de escasez hídrica, los que corresponden a Petorca, Valparaíso, San Antonio,
+                                    San Felipe de Aconcagua, Quillota, Los Andes y Marga Marga.<br>Según la Política Nacional para los 
+                                    recursos hídricos (2015), la distribución de extracción de aguas en Chile corresponde a lo siguiente:
+                                    para las <b>Aguas Superficiales</b>, el <b>73% de las extracciones</b> corresponde al sector <b>Silvoagropecuario</b>, 
+                                    el <b>6% a Agua Potable y Saneamiento</b> y un <b>21%</b> para uso <b>Industrial y Minero</b>; por otra parte,
+                                    la extracción de <b>Aguas Subterráneas</b> se reparte en un <b>49%</b> para el sector <b>Silvoagropecuario</b>,
+                                    <b>35%</b> para <b>Agua Potable y Saneamiento</b> y un <b>16%</b> para <b>Industrial y Minero</b>.
+                                </span></div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                </div>
+                                <div class="card-body" style="background:#87ceeb; text-align: justify;">
+                                    <h5 class="card-title">Mapa de Decretos de zonas de escasez hídrica</h5>
+                                    <p class="card-text">Esta información contiene un mapa nacional de
+                                        las zonas de escasez hídrica decretadas en Chile, correspondiente a
+                                        la Dirección General de Aguas.
+                                    </p>
+                                    <a style="background-color: blue;" href="https://dga.mop.gob.cl/DGADocumentos/Decretos_vigentes.jpg"
+                                        class="btn btn-primary">Ir al mapa</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -77,14 +177,10 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-locale-es-latest.js"></script>
 
-    <!-- Librería JS Mapbox -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+    <!--Libreria Canvas-->
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
-    <!-- Referencia a grafico-->
-    <script src="JS/graficos.js"></script>
-
-    <!-- Librería propia para información en Mapa -->
-    <script src="JS/mapa.js"></script>
 
 </body>
 
