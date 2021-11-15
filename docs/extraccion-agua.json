@@ -1,0 +1,74 @@
+{
+    "2010": {
+        "Año": 2010,
+        "Región": "Valparaíso",
+        "Aguas superficiales": 767,
+        "Aguas subterraneas": 327,
+        "Aguas adquiridas a terceros": 0,
+        "Unidad": "lts/seg"
+    },
+    "2011": {
+        "Año": 2011,
+        "Región": "Valparaíso",
+        "Aguas superficiales": 778,
+        "Aguas subterraneas": 332,
+        "Aguas adquiridas a terceros": 0,
+        "Unidad": "lts/seg"
+    },
+    "2012": {
+        "Año": 2012,
+        "Región": "Valparaíso",
+        "Aguas superficiales": 754,
+        "Aguas subterraneas": 322,
+        "Aguas adquiridas a terceros": 0,
+        "Unidad": "lts/seg"
+    },
+    "2013": {
+        "Año": 2013,
+        "Región": "Valparaíso",
+        "Aguas superficiales": 829,
+        "Aguas subterraneas": 623,
+        "Aguas adquiridas a terceros": 0,
+        "Unidad": "lts/seg"
+    },
+    "2014": {
+        "Año": 2014,
+        "Región": "Valparaíso",
+        "Aguas superficiales": 819,
+        "Aguas subterraneas": 604,
+        "Aguas adquiridas a terceros": 15,
+        "Unidad": "lts/seg"
+    },
+    "2015": {
+        "Año": 2015,
+        "Región": "Valparaíso",
+        "Aguas superficiales": 681,
+        "Aguas subterraneas": 606,
+        "Aguas adquiridas a terceros": 14,
+        "Unidad": "lts/seg"
+    },
+    "2016": {
+        "Año": 2016,
+        "Región": "Valparaíso",
+        "Aguas superficiales": 705,
+        "Aguas subterraneas": 619,
+        "Aguas adquiridas a terceros": 12,
+        "Unidad": "lts/seg"
+    },
+    "2017": {
+        "Año": 2017,
+        "Región": "Valparaíso",
+        "Aguas superficiales": 637.9334999999999,
+        "Aguas subterraneas": 612.4125000000001,
+        "Aguas adquiridas a terceros": 12.8,
+        "Unidad": "lts/seg"
+    },
+    "2018": {
+        "Año": 2018,
+        "Región": "Valparaíso",
+        "Aguas superficiales": 465.79790627982675,
+        "Aguas subterraneas": 678.6269418544653,
+        "Aguas adquiridas a terceros": 9.217704718417048,
+        "Unidad": "lts/seg"
+    }
+}
