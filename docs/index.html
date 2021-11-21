@@ -19,22 +19,21 @@
     <!-- Librería CSS Mapbox -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
 
-
 </head>
 
 <body>
     <span>
-        <h3 align= 'center'><br>Información de aguas, Región de Valparaíso <br></h3>
+        <h3 align='center'><br>Información de aguas, Región de Valparaíso <br></h3>
     </span>
 
     <!--   Primera columna: graficos-->
     <div class="container">
         <div class="row align-items-start">
             <div class="col">
-                <div class="alert alert-info" role="alert", align='center'>
+                <div class="alert alert-info" role="alert" , align='center'>
                     Gráficos de extracción de aguas
                 </div>
-                <div class="col" >
+                <div class="col">
 
                     <div>
                         <canvas id="chart_sup" width="500" height="500"></canvas>
@@ -127,17 +126,23 @@
                     <!--
                         Información sobre la aplicación
                     -->
-                    <div class="container" >
+                    <div class="container">
 
                         <div class="col">
-                            <div ><span>La región de Valparaíso tiene seis territorios declarados como zona
+                            <div><span>La región de Valparaíso tiene seis territorios declarados como zona
                                     de escasez hídrica, los que corresponden a Petorca, Valparaíso, San Antonio,
-                                    San Felipe de Aconcagua, Quillota, Los Andes y Marga Marga.<br>Según la Política Nacional para los 
-                                    recursos hídricos (2015), la distribución de extracción de aguas en Chile corresponde a lo siguiente:
-                                    para las <b>Aguas Superficiales</b>, el <b>73% de las extracciones</b> corresponde al sector <b>Silvoagropecuario</b>, 
-                                    el <b>6% a Agua Potable y Saneamiento</b> y un <b>21%</b> para uso <b>Industrial y Minero</b>; por otra parte,
-                                    la extracción de <b>Aguas Subterráneas</b> se reparte en un <b>49%</b> para el sector <b>Silvoagropecuario</b>,
-                                    <b>35%</b> para <b>Agua Potable y Saneamiento</b> y un <b>16%</b> para <b>Industrial y Minero</b>.
+                                    San Felipe de Aconcagua, Quillota, Los Andes y Marga Marga.<br>Según la Política
+                                    Nacional para los
+                                    recursos hídricos (2015), la distribución de extracción de aguas en Chile
+                                    corresponde a lo siguiente:
+                                    para las <b>Aguas Superficiales</b>, el <b>73% de las extracciones</b> corresponde
+                                    al sector <b>Silvoagropecuario</b>,
+                                    el <b>6% a Agua Potable y Saneamiento</b> y un <b>21%</b> para uso <b>Industrial y
+                                        Minero</b>; por otra parte,
+                                    la extracción de <b>Aguas Subterráneas</b> se reparte en un <b>49%</b> para el
+                                    sector <b>Silvoagropecuario</b>,
+                                    <b>35%</b> para <b>Agua Potable y Saneamiento</b> y un <b>16%</b> para <b>Industrial
+                                        y Minero</b>.
                                 </span></div>
 
                             <div class="card">
@@ -149,7 +154,8 @@
                                         las zonas de escasez hídrica decretadas en Chile, correspondiente a
                                         la Dirección General de Aguas.
                                     </p>
-                                    <a style="background-color: blue;" href="https://dga.mop.gob.cl/DGADocumentos/Decretos_vigentes.jpg"
+                                    <a style="background-color: blue;"
+                                        href="https://dga.mop.gob.cl/DGADocumentos/Decretos_vigentes.jpg"
                                         class="btn btn-primary">Ir al mapa</a>
                                 </div>
                             </div>
@@ -159,12 +165,20 @@
             </div>
 
         </div>
-        <div class="row align-items-center">
-            <div class="col">
-            </div>
-        </div>
-    </div>
 
+    </div>
+    <div class="container">        
+        <div> <br>
+        <br> </div>
+            <div ><span style= 'color: blue;'>En el mapa se puede visualizar el área correspondiente las zonas 
+                con declaratoria de agotamiento de aguas en la Región de Valparaíso. Está conformada por las 
+                declaratorias la <b>Primera sección del río Aconcagua</b> y <b>Río Putaendo y sus afluentes</b>;
+                 ocupando cada una de ellas una extensión de <b>2732.97 km2</b> y <b>1834.39 km2</b> respectivamente.
+            </span></div>     
+            <div id="mapa" style='width:80%; height: 600px;'></div>
+            </div>
+        
+    </div>
 
 
 
@@ -180,6 +194,11 @@
     <!--Libreria Canvas-->
     <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <!--Libreria Mapbox-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+
+    <script src='mapa.js'></script>
 
 
 </body>

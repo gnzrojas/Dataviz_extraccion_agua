@@ -2,9 +2,9 @@
   "name": "visor-agua",
   "version": "1.0.0",
   "description": "Aplicación con información de extracción de aguas y APR en la región de Valparaíso",
-  "main": "proyecto.html",
+  "main": "index.html",
   "scripts": {
-    "start": "http-server proyecto.html",
+    "start": "http-server index.html",
     "extr-agua": "node extra-agua.js",
     "grafico": "node graficos.js"
   },
@@ -13,7 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "xlsx": "^0.17.3"
-    
   },
   "devDependencies": {
     "http-server": "^13.0.2"
